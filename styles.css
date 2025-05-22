@@ -73,7 +73,7 @@ q {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.theme-switch-container {
+theme-switch-container {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -144,4 +144,35 @@ a:hover {
 
 a:active {
   color: rgb(39, 87, 102);
+}
+
+/* Media queries pour les appareils mobiles */
+@media (max-width: 768px) {
+  section,
+  header,
+  footer {
+    padding: 0 5%;
+  }
+
+  .subheader {
+    padding: 5% 5%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  header h2 {
+    line-height: 1;
+  }
+
+  .theme-switch-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
 }
