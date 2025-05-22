@@ -73,7 +73,7 @@ q {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-theme-switch-container {
+.theme-switch-container {
   position: fixed;
   top: 20px;
   right: 20px;
