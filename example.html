@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lorem ipsum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="theme-switch-container">
+      <span class="icon light-icon"><i class="fas fa-sun"></i></span>
+      <label class="theme-switch">
+        <input type="checkbox" id="theme-toggle" checked />
+        <span class="slider"></span>
+      </label>
+      <span class="icon dark-icon"><i class="fas fa-moon"></i></span>
+    </div>
+
+    <header>
+      <h2>Lorem ipsum</h2>
+      <h1>DOLORES</h1>
+      <h2>consectetur adipiscing elit</h2>
+    </header>
+    <main>
+      <section class="subheader">
+        <div>
+          <p>
+            <q>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+              dui mauris. Vivamus hendrerit
+            </q>
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>Introduction à la Lenteur Consciente</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui
+          mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor
+          neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim.
+          Phasellus molestie magna non est bibendum non venenatis nisl tempor.
+          Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor
+          posuere. Praesent id metus massa, ut blandit odio.
+        </p>
+        <p>
+          Proin quis tortor orci. Etiam at risus et justo dignissim congue.
+          Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc
+          eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus
+          eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla
+          justo, eget luctus tortor.
+        </p>
+      </section>
+
+      <section>
+        <h2>La Beauté dans les Détails Quotidiens</h2>
+        <h3>Redécouvrir l'Ordinaire</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam
+          lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam
+          viverra nec consectetur ante hendrerit. Donec et mollis dolor.
+          Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam
+          tincidunt congue enim, ut porta lorem lacinia consectetur.
+        </p>
+
+        <h3>Rituels et Présence</h3>
+        <p>
+          Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.
+          Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
+          Pellentesque auctor nisi id magna consequat sagittis. Curabitur
+          dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet.
+          Ut convallis libero in urna ultrices accumsan.
+        </p>
+      </section>
+
+      <section>
+        <h2>Méditation Appliquée</h2>
+        <p>
+          Vestibulum commodo nulla eu augue tincidunt rutrum. Suspendisse
+          interdum lectus purus, ut hendrerit velit egestas eget. Sed ac rutrum
+          magna. Fusce at est sed felis aliquet tempus. Curabitur ullamcorper
+          commodo ligula, a tempus metus tempus at. Integer sed ipsum eget eros
+          hendrerit interdum. Vestibulum sapien neque, lacinia quis leo non,
+          aliquam ultrices velit.
+        </p>
+
+        <h3>Pratiques Quotidiennes</h3>
+        <p>
+          Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in
+          nulla enim. Phasellus molestie magna non est bibendum non venenatis
+          nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris
+          iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.
+          Proin quis tortor orci. Etiam at risus et justo dignissim congue.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Who am I? No one really. Random person on the internet. Sofware engineer
+        with 14 years of experience and an opinion on pretty much everything. I
+        try to be smart enough.
+      </p>
+      <p>© 2025 | Lukahn2501</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleSwitch = document.getElementById("theme-toggle");
+        const currentTheme = localStorage.getItem("theme") || "dark";
+
+        document.documentElement.setAttribute("data-theme", currentTheme);
+        toggleSwitch.checked = currentTheme === "dark";
+
+        toggleSwitch.addEventListener("change", function (e) {
+          if (e.target.checked) {
+            document.documentElement.setAttribute("data-theme", "dark");
+            localStorage.setItem("theme", "dark");
+          } else {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("theme", "light");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

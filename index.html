@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lorem ipsum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="theme-switch-container">
+      <span class="icon light-icon"><i class="fas fa-sun"></i></span>
+      <label class="theme-switch">
+        <input type="checkbox" id="theme-toggle" checked />
+        <span class="slider"></span>
+      </label>
+      <span class="icon dark-icon"><i class="fas fa-moon"></i></span>
+    </div>
+
+    <header>
+      <h2>Lukahn2501</h2>
+      <h2>Most rambling about stuff</h2>
+    </header>
+    <main>
+      <section class="subheader">
+        <div>
+          <p>
+            Here's a collection of some thoughts I have on some stuff. I may or
+            may not maintain this.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>Posts</h2>
+        <ul>
+          <li>
+            <a href="./example.html">Example page</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Who am I? No one really. Random person on the internet. Sofware engineer
+        with 14 years of experience and an opinion on pretty much everything. I
+        try to be smart enough.
+      </p>
+      <p>© 2025 | Lukahn2501</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleSwitch = document.getElementById("theme-toggle");
+        const currentTheme = localStorage.getItem("theme") || "dark";
+
+        document.documentElement.setAttribute("data-theme", currentTheme);
+        toggleSwitch.checked = currentTheme === "dark";
+
+        toggleSwitch.addEventListener("change", function (e) {
+          if (e.target.checked) {
+            document.documentElement.setAttribute("data-theme", "dark");
+            localStorage.setItem("theme", "dark");
+          } else {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("theme", "light");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
